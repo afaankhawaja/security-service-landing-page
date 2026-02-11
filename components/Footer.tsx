@@ -49,20 +49,21 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center lg:items-end space-y-8">
-          <button className="bg-white text-navy-dark font-agency text-lg px-8 py-2 rounded-full tracking-widest hover:bg-gold hover:text-white transition-all duration-300 uppercase">
-            Get In Touch
+          <button className="bg-white text-navy-dark font-agency text-lg px-8 py-2 rounded-full tracking-widest hover:bg-[#E9A07D] hover:text-white transition-all duration-300 uppercase">
+           <a href="tel:+447519300050">Get In Touch</a>
           </button>
 
           <div className="flex gap-4">
             {[
-              { Icon: Facebook, link: "#" },
-              { Icon: Instagram, link: "#" },
-              { Icon: Linkedin, link: "#" },
-              { Icon: Mail, link: "#" },
+              { Icon: Facebook, link: "https://www.facebook.com/" },
+              { Icon: Instagram, link: "https://www.instagram.com/ss_secureservices?igsh=MTh4ZDAxZ2ZsN2twaw%3D%3D" },
+              { Icon: Linkedin, link: "https://www.linkedin.com/" },
+              { Icon: Mail, link: "mailto:nas@secureservicesltd.co.uk" },
             ].map((social, i) => (
               <a 
                 key={i} 
                 href={social.link} 
+                target="_blank"
                 className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-white hover:text-navy-dark transition-all"
               >
                 <social.Icon size={20} />

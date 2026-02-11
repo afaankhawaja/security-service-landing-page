@@ -65,15 +65,15 @@ export const Excellence = () => {
   }, []);
 
   return (
-    <section id="services" className="bg-[#0a0b10] px-2 sm:px-10">
+    <section id="services" className=" px-2 sm:px-10">
 
       <div
         ref={sectionRef}
         className="relative bg-[#fdfbf9] w-full max-w-[1400px] mx-auto shadow-2xl overflow-visible"
       >
 
-        <div className="absolute top-0 left-0 w-full h-[50px] overflow-hidden pointer-events-none">
-          <svg className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[50px] fill-[#0a0b10]" viewBox="0 0 100 50">
+        <div style={{ backgroundImage: "url('/assets/white-logo-cropped.svg')" }} className="absolute top-0 left-0 w-full h-[50px] overflow-hidden pointer-events-none">
+          <svg className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[50px] " viewBox="0 0 100 50">
             <polygon points="0,0 100,0 50,50" />
           </svg>
         </div>

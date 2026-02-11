@@ -8,6 +8,8 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { Chatbot } from "@/components/Chatbot";
 import { AboutUs } from "@/components/AboutUs";
+import { TrustExperience } from "@/components/TrustExperience";
+import { ServiceExpertise } from "@/components/ServiceExpertise";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Hero />
       <Excellence />
       <AboutUs/>
+      <ServiceExpertise />
+      <TrustExperience/>
       <Testimonials />
       <ContactSection />
       <Footer />

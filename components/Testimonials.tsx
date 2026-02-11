@@ -54,7 +54,7 @@ export const Testimonials = () => {
       ref={sectionRef} 
       className="bg-geometric-pattern  py-24 lg:py-32 px-6 relative overflow-visible"
     >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-[#fdfbf9] z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-dark-blue z-10" />
 
       <div className="max-w-7xl mx-auto">
         <h2 className="font-agency text-5xl md:text-7xl text-white mb-20 tracking-tight uppercase">

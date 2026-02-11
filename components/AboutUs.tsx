@@ -53,7 +53,7 @@ export const AboutUs = () => {
 
         <div ref={textRef} className="order-1 lg:order-2 space-y-8">
           <div className="space-y-2">
-            <h4 className="font-agency text-gold text-xl tracking-[0.3em] uppercase">
+            <h4 className="font-agency text-[#E9A07D] text-xl tracking-[0.3em] uppercase">
               Who We Are
             </h4>
             <h2 className="font-agency text-5xl md:text-6xl text-[#2E3350] leading-none uppercase">
@@ -75,7 +75,7 @@ export const AboutUs = () => {
           </div>
 
           <div className="pt-4">
-            <button className="bg-[#2E3350] text-white font-agency text-xl px-10 py-3 tracking-widest hover:bg-gold transition-colors uppercase">
+            <button className="bg-[#2E3350] text-white font-agency text-xl px-10 py-3 tracking-widest hover:bg-[#E9A07D] transition-colors uppercase">
               Learn More
             </button>
           </div>

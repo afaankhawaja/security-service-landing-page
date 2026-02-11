@@ -100,13 +100,15 @@ export const Navbar = () => {
       </div>
 
       <div className="flex items-center w-fit gap-x-6 px-7 py-2.5">
-        <Link
-          href="#contact"
-          className="hidden sm:block px-3 py-2 bg-[#2E3350] text-white  rounded-full font-montserrat text-[11px] font-bold hover:brightness-125 transition-all tracking-wider"
-        >
-          GET A FREE QUOTE
-        </Link>
+        <a href="tel:+447519300050">
+          <div
+            className="hidden sm:block px-3 py-2 bg-[#2E3350] text-white rounded-full font-montserrat text-[11px] font-bold hover:brightness-125 transition-all tracking-wider cursor-pointer"
+          >
+            GET A FREE QUOTE
+          </div>
+        </a>
       </div>
+
     </nav>
   );
 };
