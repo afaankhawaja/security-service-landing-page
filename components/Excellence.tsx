@@ -31,37 +31,62 @@ export const Excellence = () => {
   const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!sectionRef.current) return;
+    const ctx = gsap.context(() => {
+      // Title Animation
+      gsap.fromTo(
+        "h2",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
 
-    gsap.fromTo(
-      contentRef.current,
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-      }
-    );
+      // Features Stagger Animation
+      gsap.fromTo(
+        ".feature-item",
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
 
-    gsap.fromTo(
-      imageRef.current,
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-      }
-    );
+      // Image Animation
+      gsap.fromTo(
+        imageRef.current,
+        { opacity: 0, x: 50, clipPath: "inset(0 0 0 100%)" },
+        {
+          opacity: 1,
+          x: 0,
+          clipPath: "inset(0 0 0 0%)",
+          duration: 1.5,
+          ease: "expo.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 60%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -85,17 +110,17 @@ export const Excellence = () => {
         </div>
 
         <div className="flex flex-col px-8 sm:px-16 lg:px-20 pt-32 pb-24">
-          
+
           <h2 className="font-agency text-4xl sm:text-6xl text-[#2E3350] text-center mb-20 tracking-tight leading-none uppercase">
             Our Commitment to Excellence
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-            
+
             {/* Left Side: Text */}
             <div className="space-y-12">
               {features.map((feature) => (
-                <div key={feature.title}>
+                <div key={feature.title} className="feature-item opacity-0">
                   <h3 className="font-agency text-3xl lg:text-4xl text-[#2E3350] mb-3 leading-tight uppercase">
                     {feature.title}
                   </h3>
@@ -106,10 +131,10 @@ export const Excellence = () => {
               ))}
             </div>
 
-            <div className="relative w-full aspect-square lg:aspect-auto lg:h-[600px] border-[12px] border-white shadow-xl">
-              <Image 
-                src="/assets/excellence.jpg" 
-                alt="Security Guard" 
+            <div ref={imageRef} className="relative w-full aspect-square lg:aspect-auto lg:h-[600px] border-[12px] border-white shadow-xl opacity-0">
+              <Image
+                src="/assets/excellence.jpg"
+                alt="Security Guard"
                 fill
                 className="object-cover"
                 priority

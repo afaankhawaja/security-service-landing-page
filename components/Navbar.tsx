@@ -89,7 +89,7 @@ export const Navbar = () => {
             transform: "translateX(-50%)",
           }}
         >
-          <div 
+          <div
             className="w-10 h-5 bg-[#E9A07D] shadow-sm"
             style={{
               clipPath: "polygon(50% 100%, 0 0, 100% 0)",
@@ -99,10 +99,10 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex items-center w-fit gap-x-6 px-7 py-2.5">
+      <div className="flex items-center w-fit gap-x-6 sm:px-7 py-2.5">
         <a href="tel:+447519300050">
           <div
-            className="hidden sm:block px-3 py-2 bg-[#2E3350] text-white rounded-full font-montserrat text-[11px] font-bold hover:brightness-125 transition-all tracking-wider cursor-pointer"
+            className="px-4 py-2 sm:px-6 sm:py-2.5 bg-[#2E3350] text-white rounded-full font-montserrat text-[10px] sm:text-[11px] font-bold hover:brightness-125 transition-all tracking-wider cursor-pointer whitespace-nowrap"
           >
             GET A FREE QUOTE
           </div>
