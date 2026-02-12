@@ -59,7 +59,7 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 sm:px-12 flex items-center justify-between h-20",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 sm:px-12 flex items-center justify-between h-16",
         isScrolled ? "bg-white shadow-md h-16" : "bg-white border-b border-gray-100"
       )}
     >
@@ -74,8 +74,8 @@ export const Navbar = () => {
             id={`nav-${link.href}`}
             onClick={() => scrollToSection(link.href)}
             className={cn(
-              "font-montserrat text-[13px] font-bold transition-colors tracking-widest outline-none",
-              activeSection === link.href ? "text-[#2E3350]" : "text-gray-400 hover:text-[#2E3350]"
+              "font-montserrat text-[13px] font-medium transition-colors tracking-widest outline-none",
+              activeSection === link.href ? "text-[#2D3350]" : "text-gray-400 hover:text-[#22263e]"
             )}
           >
             {link.name}
@@ -83,14 +83,14 @@ export const Navbar = () => {
         ))}
 
         <div
-          className="absolute -bottom-6 transition-all duration-500 ease-in-out"
+          className="absolute -bottom-4 transition-all duration-500 ease-in-out"
           style={{
             left: `${indicatorStyle.left}px`,
             transform: "translateX(-50%)",
           }}
         >
           <div
-            className="w-10 h-5 bg-[#E9A07D] shadow-sm"
+            className="w-16 h-7 bg-white shadow-sm"
             style={{
               clipPath: "polygon(50% 100%, 0 0, 100% 0)",
               filter: "drop-shadow(0 -2px 2px rgba(0,0,0,0.1))"
@@ -102,7 +102,7 @@ export const Navbar = () => {
       <div className="flex items-center w-fit gap-x-6 sm:px-7 py-2.5">
         <a href="tel:+447519300050">
           <div
-            className="px-4 py-2 sm:px-6 sm:py-2.5 bg-[#2E3350] text-white rounded-full font-montserrat text-[10px] sm:text-[11px] font-bold hover:brightness-125 transition-all tracking-wider cursor-pointer whitespace-nowrap"
+            className="px-1.5 py-1  bg-[#2E3350] text-white rounded-full font-montserrat text-[10px] sm:text-[11px] font-medium hover:brightness-125 transition-all tracking-wider cursor-pointer whitespace-nowrap"
           >
             GET A FREE QUOTE
           </div>
