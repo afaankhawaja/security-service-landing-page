@@ -36,10 +36,10 @@ export const AboutUs = () => {
   return (
     <section id="about"
       ref={sectionRef}
-      className="relative border-t-navy-dark border-t-4  bg-white  py-24 lg:py-32 px-6 overflow-visible"
+      className="relative  bg-white  py-24 lg:py-32 px-6 overflow-visible"
     >
 
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-navy-dark z-20"></div>
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-navy-dark z-20"></div> */}
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 

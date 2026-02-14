@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 const agency = localFont({
   src: "./fonts/agency-fb-webfont/AGENCYB.woff",
-  weight: "700",
+  weight: "400",
   variable: "--font-agency",
   fallback: ["sans-serif"],
   adjustFontFallback: "Arial",

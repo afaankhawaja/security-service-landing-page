@@ -36,9 +36,9 @@ export const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] flex flex-col items-end">
+    <div className={`fixed  bottom-2 right-4 sm:bottom-6 sm:right-6 ${isOpen?"z-[9999]":"z-[9999]"} flex flex-col items-end`}>
       {isOpen && (
-        <div className="mb-4 w-[calc(100vw-2rem)] max-w-96 sm:w-96 bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-100 flex flex-col h-[calc(100vh-8rem)] sm:max-h-[65vh]">
+        <div className={`${!isOpen ? "hidden" : ""} mb-4 w-[calc(100vw-2rem)] max-w-96 sm:w-96 bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-100 flex flex-col h-[calc(100vh-8rem)] sm:max-h-[65vh]`}>
           
           {/* Header */}
           <div className="bg-[#2E3350] p-3 sm:p-4 flex justify-between items-center flex-shrink-0">
@@ -96,14 +96,15 @@ export const Chatbot = () => {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-[#2E3350] hover:bg-[#E9A07D] text-white p-3 sm:p-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center group"
+        className=" text-white p-3 sm:p-4 transition-all duration-300 transform hover:scale-110  items-center group"
       >
-        <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 font-agency text-xs sm:text-sm tracking-widest uppercase whitespace-nowrap">
+        
+        <div className="relative  w-[5vw] h-[5vw]  ml-0  transition-all">
+          <Image src="/assets/only-logo-cropped.svg" alt="Logo" fill className="object-cover" />
+        </div>
+        <span className="max-w-fit overflow-hidden group-hover:max-w-xs transition-all duration-500 font-agency text-xs sm:text-sm tracking-widest uppercase whitespace-nowrap">
           Live Chat
         </span>
-        <div className="relative w-8 h-8 sm:w-10 sm:h-10 ml-0 group-hover:ml-2 transition-all">
-          <Image src="/assets/only-logo-cropped.svg" alt="Logo" fill className="object-contain" />
-        </div>
       </button>
     </div>
   );

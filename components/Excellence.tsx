@@ -90,60 +90,78 @@ export const Excellence = () => {
   }, []);
 
   return (
-    <section id="services" className=" px-2 sm:px-10">
+    <section id="services" className="h-full relative overflow-visible">
+      <div className="absolute top-0 left-0 z-0 bg-contain opacity-10 pointer-events-none" style={{ backgroundImage: "url('/assets/top-side.png')" }}></div>
+  <div
+    ref={sectionRef}
+    className="relative z-10 bg-[#F8B178]/5 py-20 w-full max-w-full mx-auto bg-no-repeat bg-cover overflow-visible"
+    style={{ 
+    //   clipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 96%, 45% 90%, 0% 90%)',
+    // WebkitClipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 96%, 45% 90%, 0% 90%)',
+      backgroundImage: "url('/assets/SVG_BG-for-landing-page.svg')",
+    }}
+  >
+    {/* Background Watermark */}
+    <div
+      className="absolute top-0 left-0 z-0 bg-contain opacity-10 pointer-events-none"
+      style={{
+        backgroundImage: "url('/assets/SVG_BG-for-landing-page.svg')",
+        backgroundSize: "180%",
+        backgroundPosition: "0% 0%",
+      }}
+    />
 
-      <div
-        ref={sectionRef}
-        className="relative bg-[#fdfbf9] w-full max-w-[1400px] mx-auto shadow-2xl overflow-visible"
-      >
+    <div className="relative z-10 flex flex-col px-8 sm:px-16 lg:px-20 pb-24">
+      {/* Section Header: Hierarchy Level 1 */}
+      <h2 className="font-agency font-extralight text-3xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#151E33] text-center mb-24 tracking-tight lg:text-nowrap leading-none uppercase">
+        Our Commitment to Excellence
+      </h2>
 
-        <div style={{ backgroundImage: "url('/assets/white-logo-cropped.svg')" }} className="absolute top-0 left-0 w-full h-[50px] overflow-hidden pointer-events-none">
-          <svg className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[50px] " viewBox="0 0 100 50">
-            <polygon points="0,0 100,0 50,50" />
-          </svg>
+      <div className="grid lg:grid-cols-3 gap-10 lg:gap-20 items-stretch">
+        {/* Left Side: Text Container */}
+        <div className="lg:col-span-2 space-y-12 lg:space-y-16">
+          {features.map((feature) => (
+            <div key={feature.title} className="feature-item opacity-0">
+              {/* Feature Title: Hierarchy Level 2 (Scaled down for readability) */}
+              <h3 className="font-agency text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-[#151E33] mb-3 leading-tight uppercase tracking-tight font-bold">
+                {feature.title}
+              </h3>
+              {/* Description: Hierarchy Level 3 */}
+              <p className="font-montserrat text-[#151E33]/80 text-base lg:text-lg xl:text-xl font-medium leading-relaxed max-w-2xl">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
 
-        <div className="absolute -bottom-[50px] left-0 w-full h-[50px] overflow-hidden pointer-events-none">
-          <svg className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[50px] fill-[#fdfbf9]" viewBox="0 0 100 50">
-            <polygon points="0,0 100,0 50,50" />
-          </svg>
-        </div>
-
-        <div className="flex flex-col px-8 sm:px-16 lg:px-20 pt-32 pb-24">
-
-          <h2 className="font-agency text-4xl sm:text-6xl text-[#2E3350] text-center mb-20 tracking-tight leading-none uppercase">
-            Our Commitment to Excellence
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-
-            {/* Left Side: Text */}
-            <div className="space-y-12">
-              {features.map((feature) => (
-                <div key={feature.title} className="feature-item opacity-0">
-                  <h3 className="font-agency text-3xl lg:text-4xl text-[#2E3350] mb-3 leading-tight uppercase">
-                    {feature.title}
-                  </h3>
-                  <p className="font-montserrat text-[#2E3350]/80 text-base lg:text-lg font-medium leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div ref={imageRef} className="relative w-full aspect-square lg:aspect-auto lg:h-[600px] border-[12px] border-white shadow-xl opacity-0">
-              <Image
-                src="/assets/excellence.jpg"
-                alt="Security Guard"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-
+        {/* Right Side: Image Container (Stretches to match text height) */}
+        <div className="lg:col-span-1 hidden lg:block">
+          <div 
+            ref={imageRef} 
+            className="relative w-full h-full border-[12px] border-white shadow-2xl opacity-0"
+          >
+            <Image
+              src="/assets/excellence.jpg"
+              alt="Security Guard"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
+
+        {/* Mobile Image: Balanced Aspect Ratio */}
+        <div className="lg:hidden relative w-full aspect-[4/5] border-[8px] mb-10 border-white shadow-lg">
+          <Image
+            src="/assets/excellence.jpg"
+            alt="Security Guard"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 };

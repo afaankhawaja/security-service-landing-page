@@ -1,0 +1,54 @@
+<svg viewBox="0 118.777536 2163.3151856017994 954.72" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" style="max-height: 500px" width="2163.3151856017994" height="954.72">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #fff;
+        mix-blend-mode: overlay;
+        opacity: .7;
+      }
+
+      .st1, .st2 {
+        isolation: isolate;
+      }
+
+      .st3 {
+        fill: #2d3350;
+      }
+
+      .st4 {
+        mix-blend-mode: soft-light;
+      }
+
+      .st5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect height="1080" width="1920" class="st0"/>
+    </clipPath>
+  </defs>
+  <g class="st2">
+    <g id="b">
+      <g id="c">
+        <g>
+          <g class="st5">
+            <g>
+              <image xlink:href="Asset 11-1.png" transform="translate(0 -62.9) scale(.3)" height="4518" width="6777" class="st2"/>
+              <g class="st4">
+                <path d="M1666-181l-201.3,201.3-53.7,583.2c-3.7,38.6-18.7,71.2-45.2,97.6l-213.5,213.5,129,129,312.8-312.8,40.2-426.3c3.7-40.3,18.7-73.6,45.2-100l186.1-186.1-199.5-199.5h0Z" class="st3"/>
+                <path d="M1296.3,588.9l53.6-568.6c3.7-40.3,18.7-73.6,45.2-100l193.4-193.4c19.9-19.9,42.6-29.8,68-29.6,5.8,0,11.4.8,16.9,1.8l-451-451L295.4,175.2l444.9,444.9c-.2-2-.6-3.9-.7-6-.2-25.4,9.7-48.1,29.6-68l242.2-242.2,84.8,84.8-234.9,234.8,199.5,199.5,234.9-234.9.7.7h0Z" class="st3"/>
+                <polygon points="1957 110 1747.6 319.4 1721.4 603.5 2086 238.9 1957 110" class="st3"/>
+              </g>
+            </g>
+          </g>
+          <rect height="1081" width="861.4" y="-.5" x="54.5" class="st1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

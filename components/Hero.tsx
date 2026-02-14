@@ -41,18 +41,48 @@ export const Hero = () => {
     }, []);
 
     return (
+        // <section
+        //     id="home"
+        //     ref={heroRef}
+        //     className="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-center text-center px-4 overflow-hidden bg-cover bg-center"
+        //     style={{
+        //         backgroundImage: 'linear-gradient(rgba(10, 11, 16, 0.4), rgba(10, 11, 16, 0.4)), url("/assets/hero-bg.jpg")',
+        //     }}
+        // >
+        //     <div ref={logoRef} className="mb-10 w-full h-full absolute left-10 top-[50%]">
+        //         <Image src="/assets/white-logo-cropped.svg" alt="Logo" width={0} height={0} className="object-cover w-[500px] h-[40vh] " />
+        //     </div>
+        //     <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-navy-dark/50 to-transparent pointer-events-none"></div>
+        // </section>
+        <div className=" w-full bg-cover bg-center bg-[#F8B178]/5" style={{
+          backgroundImage: "url('/assets/SVG_BG-for-landing-page.svg')",
+        }}>
         <section
-            id="home"
-            ref={heroRef}
-            className="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-center text-center px-4 overflow-hidden bg-cover bg-center"
-            style={{
-                backgroundImage: 'linear-gradient(rgba(10, 11, 16, 0.4), rgba(10, 11, 16, 0.4)), url("/assets/hero-bg.jpg")',
-            }}
-        >
-            <div ref={logoRef} className="mb-10 w-fit h-fit absolute left-10 top-72">
-                <Image src="/assets/white-logo-cropped.svg" alt="Logo" width={200} height={250} className="object-cover " />
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-navy-dark/50 to-transparent pointer-events-none"></div>
-        </section>
+  id="home"
+  ref={heroRef}
+  className="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-center text-center px-5 overflow-visible bg-cover bg-center"
+  style={{
+    backgroundImage: 'linear-gradient(rgba(10, 11, 16, 0.4), rgba(10, 11, 16, 0.4)), url("/assets/hero-bg.jpg")',
+    // Flat top edge, arrow at the bottom
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0% 90%)',
+    WebkitClipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 53.5% 90%, 50% 95.5%, 46% 90%, 0% 90%)'
+  }}
+>
+  {/* LOGO CONTAINER */}
+  <div 
+    ref={logoRef} 
+    className="absolute left-0 top-1/2 -translate-y-1/2 z-20"
+  >
+    <Image 
+      src="/assets/white-logo-cropped.svg" 
+      alt="Logo" 
+      width={500} 
+      height={250} 
+      priority
+      className="w-[500px] h-[50vh] object-contain" 
+    />
+  </div>
+</section>
+</div>
     );
 };

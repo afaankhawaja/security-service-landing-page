@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import Image from "next/image";
+import { div } from "framer-motion/client";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,15 +73,29 @@ export const Testimonials = () => {
   }, []);
 
   return (
+    <div className=" bg-cover bg-[#F8B178]/15 relative z-50  bg-no-repeat overflow-visible" style={{
+     backgroundImage: "url('/assets/SVG_BG-for landing-page-2.svg')",
+    }}>
+      
     <section
       id="testimonials"
       ref={sectionRef}
-      className="bg-geometric-pattern  py-24 lg:py-32 px-6 relative overflow-visible"
+      style={{
+      /* This polygon creates a flat top and an arrow at the bottom.
+         The -mt-20 (or similar) might be needed on the section 
+         to pull it up under the previous arrow if there is a gap.
+      */
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 96%, 45% 90%, 0% 90%)',
+    WebkitClipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0% 90%)',
+     backgroundImage: "url('/assets/SVG_BG-for landing-page-2.svg')",
+    }}
+      className=" z-60  pb-24 lg:py-32 px-6 relative bg-no-repeat bg-cover bg-center overflow-visbile"
     >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-dark-blue z-10" />
+      {/* <Image src="/assets/testmonial-bg-0.svg" alt="Logo" width={0} height={0} priority className="w-full h-full absolute inset-0 object-cover mt-10 z-10" /> */}
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-dark-blue z-10" /> */}
 
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-agency text-5xl md:text-7xl text-white mb-20 tracking-tight uppercase">
+        <h2 className="font-agency px-30 text-5xl md:text-7xl text-white mb-20 tracking-tight uppercase">
           Customer Testimonials
         </h2>
 
@@ -98,10 +114,10 @@ export const Testimonials = () => {
                 className="group bg-white p-10 md:p-14 shadow-2xl relative flex flex-col justify-between min-h-[400px] transition-transform duration-500 hover:-translate-y-2"
               >
                 <div>
-                  <h3 className="font-agency text-3xl text-[#2E3350] leading-none mb-1 uppercase">
+                  <h3 className="font-agency text-3xl text-[#151E33] leading-none mb-1 uppercase">
                     {t.name}
                   </h3>
-                  <p className="font-agency text-sm text-gray-400 mb-8 tracking-[0.2em] uppercase">
+                  <p className="font-agency text-3xl text-[#151E33] leading-none mb-1 uppercase">
                     {t.role}
                   </p>
                   <p className="font-montserrat text-[14px] md:text-[15px] font-bold text-[#2E3350] leading-relaxed italic opacity-90">
@@ -135,5 +151,6 @@ export const Testimonials = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };

@@ -50,7 +50,7 @@ const servicesData: Service[] = [
         id: '04',
         title: 'MOBILE PATROLS',
         description: 'OUR MOBILE PATROL SECURITY SERVICES INCLUDE REGULAR INSPECTIONS OF ACCESS POINTS, PERIMETER FENCING, LIGHTING, AND INTERNAL/EXTERNAL AREAS. WITH RAPID ALARM RESPONSE AND SIA LICENSED OFFICERS, WE PROVIDE RELIABLE 24/7 PROTECTION ACROSS SHEFFIELD AND THE UK',
-        imageUrl: '/assets/service-4.jpg',
+        imageUrl: '/assets/CAR_WITH_LOGO.png',
         ctaText: 'Analyze Growth',
         ctaLink: '/services/analytics',
     },
@@ -58,7 +58,7 @@ const servicesData: Service[] = [
         id: '05',
         title: 'KEY HOLDINGS',
         description: 'OUR PROFESSIONAL KEY HOLDING SECURITY SERVICES PROVIDE SECURE KEY MANAGEMENT AND FAST ALARM RESPONSE FOR COMMERCIAL PROPERTIES, OFFICES, RETAIL PREMISES, AND CONSTRUCTION SITES. WITH 24/7 SUPPORT FROM SIA-LICENSED SECURITY OFFICERS, WE DELIVER RELIABLE KEY HOLDING AND EMERGENCY RESPONSE SERVICES ACROSS SHEFFIELD AND THE UK',
-        imageUrl: '/assets/service-5.jpg',
+        imageUrl: '/assets/BUILDING_WITH_LOGO.png',
         ctaText: 'Start Building',
         ctaLink: '/services/product',
     },
@@ -74,7 +74,7 @@ const servicesData: Service[] = [
 
 export default function ServicesGrid() {
     return (
-        <section id="services" className="w-full py-20  -mt-5">
+        <section id="services" className="w-full pt-20 pb-10 bg-[#ECEDF0] -mt-5">
             <div className="max-w-[1920px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-dense auto-rows-fr">
                     {servicesData.map((service, index) => {

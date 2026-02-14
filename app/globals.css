@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-dark: #0a0b10;
-  --color-navy-light: #161b2b;
-  --color-navy-muted: #1e253c;
-  --color-gold: #d4af37;
-  --color-off-white: #fdfbf9;
+
 
   --font-agency: var(--font-agency), sans-serif;
   --font-montserrat: var(--font-montserrat), sans-serif;
 }
 
-:root {
-  /* --background: #ffffff; */
-  --foreground: #0a0b10;
-  --navy-dark: #151E33;
-  --navy-light: #161b2b;
-  --gold: #d4af37;
-  --off-white: #fdfbf9;
+.section {
+  background: #1a237e; /* section color */
+  height: 120px;
+  position: relative;
 }
 
-.bg-geometric-pattern {
+/* outer triangle (big colored one) */
+.triangles {
+  position: absolute;
+  bottom: -40px;  /* push down */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid #1a237e;
+}
+
+/* inner white "border" triangle */
+.triangles::after {
+  content: "";
+  position: absolute;
+  top: -35px; /* create gap */
+  left: -35px;
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 35px solid white; /* white border inside */
+}
+
+/*  */
+
+/* .bg-geometric-pattern {
   background-color: #161b2b;
   background-image: linear-gradient(135deg, #1e253c 25%, transparent 25%),
     linear-gradient(225deg, #1e253c 25%, transparent 25%),
@@ -29,19 +50,14 @@
   background-position: 40px 0, 40px 0, 0 0, 0 0;
   background-size: 80px 80px;
   background-repeat: repeat;
-}
+} */
 
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  /* background: var(--background); */
-  color: var(--foreground);
-  font-family: var(--font-montserrat);
-  overflow-x: hidden;
-}
+
 
 h1,
 h2,
@@ -50,7 +66,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-agency);
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
