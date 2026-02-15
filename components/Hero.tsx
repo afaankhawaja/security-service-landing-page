@@ -54,8 +54,8 @@ export const Hero = () => {
         //     </div>
         //     <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-navy-dark/50 to-transparent pointer-events-none"></div>
         // </section>
-        <div className=" w-full bg-cover bg-center bg-[#F8B178]/5" style={{
-          backgroundImage: "url('/assets/SVG_BG-for-landing-page.svg')",
+        <div className=" w-full bg-cover  bg-center  bg-[#F8B178]/5" style={{
+          backgroundImage: "url('/assets/new/bg-2-cropped.svg')",
         }}>
         <section
   id="home"
@@ -79,7 +79,7 @@ export const Hero = () => {
       width={500} 
       height={250} 
       priority
-      className="w-[500px] h-[50vh] object-contain" 
+      className="lg:w-[500px] w-[240px] lg:h-[50vh] h-[40vh] object-contain" 
     />
   </div>
 </section>

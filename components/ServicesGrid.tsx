@@ -50,7 +50,7 @@ const servicesData: Service[] = [
         id: '04',
         title: 'MOBILE PATROLS',
         description: 'OUR MOBILE PATROL SECURITY SERVICES INCLUDE REGULAR INSPECTIONS OF ACCESS POINTS, PERIMETER FENCING, LIGHTING, AND INTERNAL/EXTERNAL AREAS. WITH RAPID ALARM RESPONSE AND SIA LICENSED OFFICERS, WE PROVIDE RELIABLE 24/7 PROTECTION ACROSS SHEFFIELD AND THE UK',
-        imageUrl: '/assets/CAR_WITH_LOGO.png',
+        imageUrl: '/assets/new/CAR-WITH-LOGO.svg',
         ctaText: 'Analyze Growth',
         ctaLink: '/services/analytics',
     },
@@ -74,7 +74,7 @@ const servicesData: Service[] = [
 
 export default function ServicesGrid() {
     return (
-        <section id="services" className="w-full pt-20 pb-10 bg-[#ECEDF0] -mt-5">
+        <section id="services" className="w-full pt-20 pb-10 bg-[#ECEDF0] -mt-5 -mb-10">
             <div className="max-w-[1920px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-dense auto-rows-fr">
                     {servicesData.map((service, index) => {
@@ -121,7 +121,7 @@ export default function ServicesGrid() {
                         background-transparent
                       relative md:absolute z-100 bg-transparent pl-5 md:pl-10 xl:pl-20
                       shadow-xl border-4 border-white
-                      w-full md:w-[110%] h-[65%] max-w-[550px] md:max-w-none
+                      w-full md:w-[110%] h-[83%] md:h-[65%] max-w-[550px] md:max-w-none
                       flex flex-col justify-center
                       transition-transform duration-500
                       ${isEvenRow

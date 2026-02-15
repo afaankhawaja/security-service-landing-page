@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="svg2" viewBox="0 0 500 670" xmlns="http://www.w3.org/2000/svg">
+  <desc>Source: openclipart.org/detail/209545</desc>
+  <defs>
+    <clipPath id="clippath">
+      <rect class="st0" width="1920" height="2383.3" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <g id="b" transform="matrix(1, 0, 0, 0.553107, -690.14797, -65.500902)" style="">
+    <g id="c" transform="matrix(1, 0, 0, 0.731678, 94.268344, 103.02428)" style="">
+      <polygon class="st2" points="1920 2526.66 1076.9 2526.66 960 2530.56 843.1 2526.66 0 2526.66 0 143.318 1920 143.318 1920 2526.66" style="fill: rgb(248, 177, 120); isolation: isolate; opacity: 0.1;"/>
+    </g>
+    <g id="c1" data-name="c" transform="matrix(1, 0, 0, 1, -217.431617, 223.783668)">
+      <g class="st4" style="clip-path: url(&quot;#clippath&quot;);">
+        <g>
+          <g class="st1" style="opacity: 0.1;">
+            <g>
+              <path class="st3" d="M2013.1,137.1l223.1-223.1-239.2-239.2-241.4,241.4-64.4,699.2c-4.4,46.3-22.4,85.3-54.1,117l-256,256,154.6,154.6,375-375,48.2-511.1c4.4-48.3,22.4-88.2,54.1-120h0Z" style="fill: rgb(102, 111, 157);"/>
+              <path class="st3" d="M886.3,628.2c-.3-30.4,11.6-57.7,35.5-81.5l290.4-290.4,101.7,101.7-281.6,281.6,239.2,239.2,281.6-281.6.8.8,64.3-681.8c4.4-48.3,22.4-88.2,54.1-120l231.9-231.9c23.9-23.9,51.1-35.7,81.6-35.5,7,0,13.7.9,20.3,2.2l-540.7-540.7L353.7,102l533.4,533.4c-.2-2.4-.8-4.7-.8-7.2h0Z" style="fill: rgb(102, 111, 157);"/>
+              <polygon class="st3" points="2345.9 23.7 2094.9 274.8 2063.5 615.4 2500.6 178.3 2345.9 23.7" style="fill: rgb(102, 111, 157);"/>
+            </g>
+          </g>
+          <g class="st1" style="opacity: 0.1;">
+            <g/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

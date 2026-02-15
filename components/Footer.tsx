@@ -5,20 +5,20 @@ import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <div className=" bg-cover  relative z-10  bg-no-repeat overflow-visible" style={{
-      backgroundImage: "url('/assets/SVG_BG-for landing-page-3-cropped.svg')",
+    <div className=" bg-cover  relative z-10 bg-center  bg-no-repeat overflow-visible" style={{
+      // backgroundImage: "url('/assets/removed-cut.svg')",
     }}>
 
-      <footer className="relative z-10 bg-[#2D3350] opacity-90 pt-20 pb-12 px-6 overflow-visible">
-        <div className="absolute inset-0 bg-geometric-pattern opacity-50 pointer-events-none"></div>
+      <footer style={{backgroundImage: "url('/assets/removed-cut.svg')"}} className="relative z-10  bg-center bg-cover bg-no-repeat opacity-90 pt-20 pb-12 px-6 overflow-visible">
+        <div className="absolute inset-0 opacity-50 pointer-events-none"></div>
 
-        <div className="absolute top-0 left-0 w-full h-[2px] bg-white"></div>
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-white/40"></div>
         <div className="absolute top-0 left-1/2 bg-transparent -translate-x-1/2 w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-t-[40px] border-t-white z-10"></div>
 
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-center text-center lg:text-left">
 
           <div className="flex flex-col items-center lg:items-start space-y-4">
-            <div className="relative w-48 h-48">
+            <div className="relative w-56 h-56">
               <Image
                 src="/assets/white-logo-cropped.svg"
                 alt="Secure Services Logo"
@@ -33,7 +33,7 @@ export const Footer = () => {
               <h3 className="font-agency text-3xl lg:text-4xl xl:text-6xl text-white mb-3 tracking-widest uppercase">
                 Address
               </h3>
-              <p className="font-agency text-lg lg:text-3xl xl:text-4xl mt-5 text-white/90 leading-tight uppercase max-w-fit">
+              <p className="font-agency text-lg mt-5 text-white/90 leading-tight uppercase max-w-fit">
                 Suite F14, Epic House, Darnal Road, Sheffield, UK.
               </p>
             </div>

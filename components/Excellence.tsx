@@ -90,22 +90,22 @@ export const Excellence = () => {
   }, []);
 
   return (
-    <section id="services" className="h-full relative overflow-visible">
-      <div className="absolute top-0 left-0 z-0 bg-contain opacity-10 pointer-events-none" style={{ backgroundImage: "url('/assets/top-side.png')" }}></div>
+    <section id="services" className="h-full  relative overflow-visible">
+      <div className="absolute top-0 left-0 z-0 bg-contain opacity-10 pointer-events-none " style={{ backgroundImage: "url('/assets/top-side.png')" }}></div>
   <div
     ref={sectionRef}
-    className="relative z-10 bg-[#F8B178]/5 py-20 w-full max-w-full mx-auto bg-no-repeat bg-cover overflow-visible"
+    className="relative z-10 bg-[#F8B178]/15 py-20 w-full max-w-full mx-auto bg-no-repeat bg-cover overflow-visible"
     style={{ 
     //   clipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 96%, 45% 90%, 0% 90%)',
     // WebkitClipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 96%, 45% 90%, 0% 90%)',
-      backgroundImage: "url('/assets/SVG_BG-for-landing-page.svg')",
+      backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
     }}
   >
     {/* Background Watermark */}
     <div
       className="absolute top-0 left-0 z-0 bg-contain opacity-10 pointer-events-none"
       style={{
-        backgroundImage: "url('/assets/SVG_BG-for-landing-page.svg')",
+        backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
         backgroundSize: "180%",
         backgroundPosition: "0% 0%",
       }}

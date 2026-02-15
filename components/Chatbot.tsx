@@ -36,7 +36,7 @@ export const Chatbot = () => {
   };
 
   return (
-    <div className={`fixed  bottom-2 right-4 sm:bottom-6 sm:right-6 ${isOpen?"z-[9999]":"z-[9999]"} flex flex-col items-end`}>
+    <div className={`fixed  bottom-2 lg:bottom-0 right-4 sm:bottom-6 sm:right-6 ${isOpen?"z-[9999]":"z-[9999]"} flex flex-col items-end`}>
       {isOpen && (
         <div className={`${!isOpen ? "hidden" : ""} mb-4 w-[calc(100vw-2rem)] max-w-96 sm:w-96 bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-100 flex flex-col h-[calc(100vh-8rem)] sm:max-h-[65vh]`}>
           
@@ -96,11 +96,11 @@ export const Chatbot = () => {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className=" text-white p-3 sm:p-4 transition-all duration-300 transform hover:scale-110  items-center group"
+        className=" text-white sm:p-4 p-3 transition-all duration-300 transform hover:scale-110  items-center group"
       >
         
-        <div className="relative  w-[5vw] h-[5vw]  ml-0  transition-all">
-          <Image src="/assets/only-logo-cropped.svg" alt="Logo" fill className="object-cover" />
+        <div className="relative  w-[5vw] h-[5vw] max-lg:mx-auto lg:ml-0  transition-all">
+          <Image src="/assets/only-logo-cropped.svg" alt="Logo" fill className="object-cover mx-auto" />
         </div>
         <span className="max-w-fit overflow-hidden group-hover:max-w-xs transition-all duration-500 font-agency text-xs sm:text-sm tracking-widest uppercase whitespace-nowrap">
           Live Chat

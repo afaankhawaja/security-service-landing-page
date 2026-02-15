@@ -3,11 +3,13 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Send } from "lucide-react";
+import Image from "next/image";
 
 export const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [showSIAField, setShowSIAField] = useState(false);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,10 +38,20 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-[#0a0b10] border-t-white border-t-4 py-24 lg:py-32 px-6 overflow-hidden">
+    <section id="contact" className="relative bg-[#151E33]/90 mb-1 border-t-white border-t-4 py-24 lg:py-32 px-6 overflow-hidden">
       {/* GEOMETRIC BACKGROUND */}
-      <div className="absolute inset-0 bg-geometric-pattern opacity-30 pointer-events-none"></div>
-
+      
+      {/* <div className="absolute inset-0 bg-geometric-pattern opacity-30 pointer-events-none"></div> */}
+      <div className="absolute inset-0 z-100 flex items-center justify-center pointer-events-none">
+        <div className="relative w-[120%] h-[120%] opacity-[0.09]">
+          <Image
+            src="/assets/SVG_Asset-11.svg"
+            alt="Logo Watermark"
+            fill
+            className="object-contain"
+          />
+        </div>
+      </div>
       {/* TOP NOTCH TRANSITION FROM TESTIMONIALS */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-[#fdfbf9] z-10"></div>
 
@@ -48,9 +60,9 @@ export const ContactSection = () => {
           <h2 className="font-agency text-5xl md:text-7xl text-white tracking-tight uppercase">
             Get In Touch
           </h2>
-          <p className="font-montserrat text-white/60 mt-4 max-w-2xl mx-auto">
+          {/* <p className="font-montserrat text-white/60 mt-4 max-w-2xl mx-auto">
             Ready to secure your assets? Send us a message or find our headquarters using the map below.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-0 items-stretch">
@@ -103,6 +115,39 @@ export const ContactSection = () => {
                   placeholder="SECURITY CONSULTATION"
                 />
               </div>
+
+              {/* Toggle for SIA Number */}
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setShowSIAField(!showSIAField)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    showSIAField ? 'bg-[#2E3350]' : 'bg-gray-300'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      showSIAField ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
+                <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">
+                  I have an SIA Number
+                </label>
+              </div>
+
+              {/* SIA Number Field (conditionally rendered) */}
+              {showSIAField && (
+                <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
+                  <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">SIA Number</label>
+                  <input
+                    type="text"
+                    name="sia_number"
+                    className="w-full border-b-2 border-gray-200 focus:border-[#2E3350] outline-none py-2 font-montserrat transition-colors bg-transparent text-[#2E3350]"
+                    placeholder="ENTER YOUR SIA NUMBER"
+                  />
+                </div>
+              )}
 
               <div className="space-y-2">
                 <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">Message</label>
