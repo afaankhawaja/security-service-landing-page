@@ -132,7 +132,7 @@ export const ContactSection = () => {
                   />
                 </button>
                 <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">
-                  I have an SIA Number
+                  Apply for Job
                 </label>
               </div>
 
