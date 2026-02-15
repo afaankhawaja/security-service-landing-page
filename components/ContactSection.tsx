@@ -67,7 +67,7 @@ export const ContactSection = () => {
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-0 items-stretch">
           
-          <div className="lg:col-span-2 relative min-h-[400px] lg:min-h-full border-[10px] border-white/5 shadow-2xl overflow-hidden group">
+          <div className="lg:col-span-2 relative min-h-[400px] lg:min-h-full border-[10px] border-white shadow-2xl overflow-hidden group">
             <iframe
               title="Office Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.744161947849!2d-1.4194464!3d53.3835694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487982637f59d57d%3A0x7d6b8807d4b2f8a1!2sDarnall%20Rd%2C%20Sheffield!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
